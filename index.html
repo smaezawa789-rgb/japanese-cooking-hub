@@ -32,19 +32,19 @@
     }
     a { color: inherit; }
     .page-shell { width: min(1120px, calc(100% - 40px)); margin-inline: auto; }
-    .topbar { padding: 22px 0; }
+    .topbar { padding: 14px 0; }
     .brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 750; letter-spacing: -.02em; }
     .brand-mark { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 12px; background: #e8efe6; font-size: 19px; }
-    .hero { position: relative; overflow: hidden; padding: clamp(42px, 8vw, 88px) 0 58px; }
+    .hero { position: relative; overflow: hidden; padding: clamp(24px, 4vw, 46px) 0 30px; }
     .hero::after { content: ""; position: absolute; width: 340px; height: 340px; border: 1px solid rgba(84,123,93,.12); border-radius: 50%; right: -115px; top: -120px; box-shadow: 0 0 0 32px rgba(84,123,93,.035), 0 0 0 64px rgba(84,123,93,.025); pointer-events: none; }
     .eyebrow { display: inline-flex; align-items: center; gap: 8px; margin: 0 0 18px; color: var(--green-dark); font-size: .78rem; font-weight: 800; letter-spacing: .13em; text-transform: uppercase; }
     .eyebrow::before { content: ""; width: 22px; height: 2px; background: var(--green); }
-    h1 { max-width: 760px; margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.65rem, 6vw, 4.65rem); line-height: 1.04; letter-spacing: -.045em; font-weight: 600; }
-    .hero-copy { max-width: 630px; margin: 22px 0 0; color: var(--muted); font-size: clamp(1rem, 2vw, 1.15rem); }
-    .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 30px; color: #53665b; font-size: .9rem; font-weight: 650; }
+    h1 { max-width: 760px; margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(2.2rem, 4.6vw, 3.55rem); line-height: 1.04; letter-spacing: -.045em; font-weight: 600; }
+    .hero-copy { max-width: 630px; margin: 12px 0 0; color: var(--muted); font-size: clamp(.96rem, 1.7vw, 1.08rem); }
+    .hero-note { display: flex; align-items: center; gap: 10px; margin-top: 15px; color: #53665b; font-size: .9rem; font-weight: 650; }
     .hero-note span { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: #e9efe5; }
-    main { padding: 10px 0 82px; }
-    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 24px; }
+    main { padding: 0 0 72px; }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 20px; margin-bottom: 18px; }
     .section-heading h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.8rem, 4vw, 2.35rem); font-weight: 600; letter-spacing: -.035em; }
     .section-heading p { margin: 6px 0 0; color: var(--muted); font-size: .95rem; }
     .tool-count { flex: 0 0 auto; padding: 7px 12px; border: 1px solid var(--line); border-radius: 999px; color: #52645a; font-size: .8rem; font-weight: 700; background: rgba(255,255,255,.65); }
@@ -59,6 +59,12 @@
     .card-action:hover { background: var(--green-dark); color: white; border-color: var(--green-dark); }
     .card-action:hover span:last-child { transform: translateX(3px); }
     .card-action:focus-visible, .brand:focus-visible { outline: 3px solid #91b596; outline-offset: 3px; }
+    .request-panel { max-width: 680px; margin: 38px auto 0; padding: 28px 24px; border: 1px solid #e3e9df; border-radius: 18px; background: #eef3eb; text-align: center; }
+    .request-panel h2 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.45rem, 3vw, 1.8rem); font-weight: 600; letter-spacing: -.025em; }
+    .request-panel p { margin: 9px 0 20px; color: var(--muted); font-size: .95rem; }
+    .request-button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 12px 20px; border-radius: 10px; background: var(--green-dark); color: #fff; font-size: .92rem; font-weight: 750; text-decoration: none; transition: background .2s ease, transform .2s ease; }
+    .request-button:hover { background: #304f39; transform: translateY(-1px); }
+    .request-button:focus-visible { outline: 3px solid #91b596; outline-offset: 3px; }
     footer { border-top: 1px solid var(--line); background: #f1f3ee; }
     .footer-inner { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 24px 0; color: var(--muted); font-size: .84rem; }
     .footer-inner p { margin: 0; }
@@ -67,9 +73,9 @@
     @media (max-width: 560px) {
       .page-shell { width: min(100% - 32px, 440px); }
       .topbar { padding: 16px 0; }
-      .hero { padding: 48px 0 42px; }
+      .hero { padding: 24px 0 28px; }
       .hero::after { width: 210px; height: 210px; right: -125px; top: -80px; }
-      .hero-copy { margin-top: 16px; }
+      .hero-copy { margin-top: 10px; }
       main { padding-bottom: 54px; }
       .section-heading { align-items: start; flex-direction: column; gap: 12px; }
       .tool-grid { grid-template-columns: 1fr; gap: 13px; }
@@ -111,7 +117,6 @@
           <div class="tool-icon" aria-hidden="true">🥢</div>
           <h3>Find a Swap for That Ingredient</h3>
           <p>Missing a Japanese ingredient? Find an easy swap and keep your recipe on track.</p>
-          <!-- Replace tool1.html with this tool's live Vercel URL when it is ready. -->
           <a class="card-action" href="https://japanese-cooking-tool.vercel.app/"><span>Open Tool</span><span aria-hidden="true">→</span></a>
         </article>
 
@@ -119,7 +124,6 @@
           <div class="tool-icon" aria-hidden="true">🍶</div>
           <h3>Let’s Make Japanese Food</h3>
           <p>Explore Japanese recipes, learn how to make them, and get the dashi and seasoning amounts just right.</p>
-          <!-- Replace tool2.html with this tool's live Vercel URL when it is ready. -->
           <a class="card-action" href="https://japanese-dashi-calculator.vercel.app/"><span>Open Tool</span><span aria-hidden="true">→</span></a>
         </article>
 
@@ -127,7 +131,6 @@
           <div class="tool-icon" aria-hidden="true">🍜</div>
           <h3>Build Your Own Bowl of Ramen</h3>
           <p>Bring together a rich broth and flavorful tare for a ramen bowl made your way.</p>
-          <!-- Replace tool3.html with this tool's live Vercel URL when it is ready. -->
           <a class="card-action" href="https://japanese-ramen-calculator.vercel.app/"><span>Open Tool</span><span aria-hidden="true">→</span></a>
         </article>
 
@@ -135,7 +138,6 @@
           <div class="tool-icon" aria-hidden="true">🐙</div>
           <h3>Let’s Make Takoyaki &amp; Okonomiyaki</h3>
           <p>Try these beloved street-food favorites with crisp edges and soft, fluffy centers.</p>
-          <!-- Replace tool4.html with this tool's live Vercel URL when it is ready. -->
           <a class="card-action" href="https://japanese-takoyaki-calculator.vercel.app/"><span>Open Tool</span><span aria-hidden="true">→</span></a>
         </article>
 
@@ -143,10 +145,18 @@
           <div class="tool-icon" aria-hidden="true">🍵</div>
           <h3>Try Making Matcha &amp; Matcha Lattes</h3>
           <p>Learn the traditional whisking method, then make a smooth, cafe-style iced latte.</p>
-          <!-- Replace tool5.html with this tool's live Vercel URL when it is ready. -->
           <a class="card-action" href="https://your-parfect-macha.vercel.app/"><span>Open Tool</span><span aria-hidden="true">→</span></a>
         </article>
       </div>
+    </section>
+
+    <!-- Recipe and tool request section -->
+    <section class="request-panel" aria-labelledby="request-title">
+      <h2 id="request-title">Didn't find what you're looking for?</h2>
+      <p>Tell us which Japanese recipe, flavor guide, or kitchen tool you'd like to see next.</p>
+      <a class="request-button" href="https://forms.gle/vTa2PMJjujoYvKCG6" target="_blank" rel="noopener noreferrer">
+        <span aria-hidden="true">📩</span> Request a Dish or Tool
+      </a>
     </section>
   </main>
 
@@ -162,6 +172,8 @@
   </script>
 </body>
 </html>
+
+
 
 
 
